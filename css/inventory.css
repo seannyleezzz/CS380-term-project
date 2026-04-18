@@ -1,10 +1,8 @@
-/* 1. Global Reset & Page Theme */
 * {
     box-sizing: border-box;
 }
 
 body {
-    /* Set the dark theme here directly */
     background-color: #0a0a0a; 
     color: white;
     margin: 0;
@@ -13,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Luxury Header & Nav (Same as Index) --- */
 header {
     background-color: #111;
     color: white;

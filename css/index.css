@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #add8e6; /* Light blue theme */
+    background-color: #111; 
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-align: center;
@@ -73,14 +73,14 @@ nav a:hover {
 }
 
 .hero-text-box {
-    background-color: #add8e6;
+    background-color: #111;
     padding: 40px 20px;
 }
 
 .hero-text-box h2 {
     margin: 0;
     font-weight: 300;
-    color: #333;
+    color: white;
     letter-spacing: 1px;
 }
 
