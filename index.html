@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxury Automotive | Avant-Garde Supercars</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header>
-      <h1>Luxury Automotive</h1>
+      <h1>Luxury Automotive | Avant-Garde Supercars</h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="inventory.html">Inventory</a>
@@ -23,20 +27,61 @@
 
     <main>
       <section class="hero-section">
-        <h2>Experience Precision and Performance</h2>
-        <p>
-          Welcome to the premier destination for high-performance supercars.
-        </p>
-        <img
-          src="images/ferrari488pista.webp"
-          alt="Featured Ferrari 488 Pista"
-          style="width: 100%; max-width: 800px"
-        />
+        <div class="slider-container">
+          <div class="slider" id="car-slider">
+            <img src="images/audir8.avif" alt="Audi R8" class="slide" />
+
+            <img
+              src="images/lamborghini.jpg"
+              alt="Lamborghini Huracan"
+              class="slide"
+            />
+
+            <img
+              src="images/laferrari.jpg"
+              alt="Ferrari 488 Pista"
+              class="slide"
+            />
+
+            <img src="images/911.webp" alt="Porsche 911" class="slide" />
+          </div>
+        </div>
+        <div class="hero-text-box">
+          <h2>
+            Welcome to the premier destination for high-performance supercars.
+          </h2>
+        </div>
       </section>
 
-      <section class="cta">
-        <h3>Ready to find your dream car?</h3>
-        <a href="inventory.html" class="btn">View Current Inventory</a>
+      <section class="cta-dark">
+        <h3>Ready to Find Your Dream Car?</h3>
+        <div class="icon-grid">
+          <a href="inventory.html" class="icon-item">
+            <img src="images/car.png" alt="Inventory" />
+            <p>Inventory</p>
+          </a>
+          <a href="compare-cars.html" class="icon-item">
+            <img src="images/car-comparing.png" alt="Compare Cars" />
+            <p>Compare Cars</p>
+          </a>
+          <a href="finance-calculator.html" class="icon-item">
+            <img src="images/money.png" alt="Financing" />
+            <p>Financing</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="card contact-card">
+          <h2>CONTACT INFO</h2>
+          <p>
+            <strong>Address:</strong> 2800 University Blvd N, Jacksonville,
+            Florida, 32211
+          </p>
+          <p><strong>Email:</strong> inquiries@luxuryautomotive.com</p>
+          <p><strong>Phone:</strong> (904) 256-8000</p>
+          <p><em>Showroom Visits: By appointment only</em></p>
+        </div>
       </section>
     </main>
 
@@ -44,6 +89,6 @@
       <p>&copy; 2026 Luxury Automotive. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

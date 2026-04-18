@@ -1,0 +1,157 @@
+/* --- Global Styles --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #add8e6; /* Light blue theme */
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden; /* Prevents side-scrolling from the slider */
+}
+
+/* --- Luxury Header & Nav --- */
+header {
+    background-color: #111; /* Sleek black */
+    color: white;
+    padding: 40px 0;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #999;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+}
+
+nav a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+/* --- Full-Width Hero Slider --- */
+.slider-container {
+    width: 100vw; 
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+}
+
+.slider {
+    display: flex;
+    width: 400%; /* 4 images = 400% */
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother "luxury" slide */
+}
+
+.slide {
+    width: 25%; /* Exactly 1/4 of 400% */
+    height: 75vh; /* 75% of the viewport height */
+    object-fit: cover;
+}
+
+.hero-text-box {
+    background-color: #add8e6;
+    padding: 40px 20px;
+}
+
+.hero-text-box h2 {
+    margin: 0;
+    font-weight: 300;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* --- CTA Dark Section & Icons --- */
+.cta-dark {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 80px 20px;
+}
+
+.cta-dark h3 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.icon-item {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: translateY(-10px);
+}
+
+.icon-item img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.icon-item p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+/* --- Contact Info Section --- */
+.contact-section {
+    padding: 60px 20px;
+}
+
+.contact-card {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #111;
+    color: #666;
+    padding: 20px 0;
+    font-size: 0.8rem;
+}
