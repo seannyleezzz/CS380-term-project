@@ -3,44 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventory | Sean's Elite Motors</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Inventory | Luxury Automotive</title>
+    <link rel="stylesheet" href="css/inventory.css" />
   </head>
   <body>
     <header>
-      <h1>Sean's Elite Motors</h1>
+      <h1>Luxury Automotive | Avant-Garde Supercars</h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="inventory.html">Inventory</a>
+        <a href="compare-cars.html">Compare Cars</a>
+        <a href="test-drive-booking.html">Book Test Drive</a>
         <a href="about-us.html">About Us</a>
         <a href="contact.html">Contact</a>
-        <a href="test-drive-booking.html">Book Test Drive</a>
-        <a href="compare-cars.html">Compare</a>
         <a href="finance-calculator.html">Financing</a>
         <a href="reviews.html">Reviews</a>
       </nav>
     </header>
 
-    <main>
-      <h2>Our Supercar Inventory</h2>
+    <main class="inventory-main">
+      <div class="inventory-header">
+        <h2>Our Curated Collection</h2>
 
-      <section class="filters">
-        <label for="sortPrice">Sort by Price:</label>
-        <select id="sortPrice">
-          <option value="default">Select...</option>
-          <option value="low-high">Low to High</option>
-          <option value="high-low">High to Low</option>
-        </select>
+        <section class="filters">
+          <div class="filter-group">
+            <label for="sortPrice">Price:</label>
+            <select id="sortPrice">
+              <option value="default">Default</option>
+              <option value="low-high">Low to High</option>
+              <option value="high-low">High to Low</option>
+            </select>
+          </div>
 
-        <label for="filterBrand">Brand:</label>
-        <select id="filterBrand">
-          <option value="all">All Brands</option>
-          <option value="Ferrari">Ferrari</option>
-          <option value="Lamborghini">Lamborghini</option>
-          <option value="Porsche">Porsche</option>
-          <option value="Mercedes-Benz">Mercedes-Benz</option>
-        </select>
-      </section>
+          <div class="filter-group">
+            <label for="filterBrand">Brand:</label>
+            <select id="filterBrand">
+              <option value="all">All Brands</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="Lamborghini">Lamborghini</option>
+              <option value="Porsche">Porsche</option>
+              <option value="Audi">Audi</option>
+              <option value="Bugatti">Bugatti</option>
+              <option value="Chevrolet">Chevrolet</option>
+            </select>
+          </div>
+        </section>
+      </div>
 
       <div id="car-container" class="inventory-grid"></div>
     </main>
