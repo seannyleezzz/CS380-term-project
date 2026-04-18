@@ -22,6 +22,5 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
 
     alert(`Thank you, ${name}! Your request to test drive the ${car} at ${time} has been received.`);
     
-    // You could redirect to a 'thank-you.html' here to hit the 9th page idea!
-    // window.location.href = 'thank-you.html';
+
 });

@@ -3,30 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compare Cars | Sean's Elite Motors</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Compare Cars | Luxury Automotive</title>
+    <link rel="stylesheet" href="css/compare.css" />
   </head>
   <body>
     <header>
-      <h1>Sean's Elite Motors</h1>
+      <h1>Luxury Automotive | Avant-Garde Supercars</h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="inventory.html">Inventory</a>
+        <a href="compare-cars.html">Compare Cars</a>
+        <a href="test-drive-booking.html">Book Test Drive</a>
         <a href="about-us.html">About Us</a>
         <a href="contact.html">Contact</a>
-        <a href="test-drive-booking.html">Book Test Drive</a>
-        <a href="compare-cars.html">Compare</a>
         <a href="finance-calculator.html">Financing</a>
         <a href="reviews.html">Reviews</a>
       </nav>
     </header>
 
-    <main>
-      <h2>Compare Our Supercars</h2>
-      <p>
-        Select up to three vehicles to compare their specifications
-        side-by-side.
-      </p>
+    <main class="compare-main">
+      <section class="hero-text-box">
+        <h2>Compare Our Supercars</h2>
+        <p>
+          Select up to three vehicles to compare their specifications
+          side-by-side.
+        </p>
+      </section>
 
       <div class="compare-controls">
         <select id="select1" class="car-selector">
@@ -40,11 +42,7 @@
         </select>
       </div>
 
-      <table
-        id="comparison-table"
-        border="1"
-        style="width: 100%; margin-top: 20px; text-align: center"
-      >
+      <table id="comparison-table">
         <thead>
           <tr id="table-header">
             <th>Feature</th>
@@ -81,6 +79,10 @@
         </tbody>
       </table>
     </main>
+
+    <footer>
+      <p>&copy; 2026 Luxury Automotive. All rights reserved.</p>
+    </footer>
 
     <script src="js/compare.js"></script>
   </body>

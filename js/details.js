@@ -2,11 +2,12 @@
 const urlParams = new URLSearchParams(window.location.search);
 const carId = urlParams.get('id');
 
-// 2. Reference the same car data (In a real project, this would be in a shared file)
+// 2. Reference the same car data as in compare.js 
 const cars = [
-    { brand: "Ferrari", model: "488 Pista", hp: 711, engine: "3.9L V8", price: 350000, img: "images/ferrari488pista.webp" },
-    { brand: "Lamborghini", model: "Huracan EVO", hp: 631, engine: "5.2L V10", price: 289000, img: "images/lambo.webp" }
-    // ... add the rest of your cars here
+    { brand: "Audi", model: "R8", hp: 562, engine: "5.2L V10", price: 197000, img: "images/audir8.avif" },
+    { brand: "Lamborghini", model: "Huracan", hp: 631, engine: "5.2L V10", price: 289000, img: "images/lambo Revuelto.jpg" },
+    { brand: "Ferrari", model: "LaFerrari", hp: 949, engine: "6.3L V12 Hybrid", price: 3500000, img: "images/laferrari.jpg" },
+    { brand: "Porsche", model: "911", hp: 640, engine: "3.7L Flat-6", price: 245000, img: "images/911.webp" }
 ];
 
 // 3. Find the specific car

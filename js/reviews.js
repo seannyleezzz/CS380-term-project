@@ -1,8 +1,8 @@
 // 1. Data: Array of Review Objects
 const customerReviews = [
-    { name: "John Doe", rating: 5, text: "The Ferrari 488 Pista is a masterpiece. The buying process was seamless!", img: "images/user1.webp" },
-    { name: "Jane Smith", rating: 4, text: "Amazing inventory. Found my dream Porsche here. Highly recommended.", img: "images/user2.webp" },
-    { name: "Mike Ross", rating: 5, text: "Elite service for elite cars. The team knows their stuff.", img: "images/user3.webp" }
+    { name: "John Doe", rating: 5, text: "The Audi R8 is a masterpiece. The buying process was seamless!", img: "images/audir8.avif" },
+    { name: "Jane Smith", rating: 4, text: "Amazing inventory. Found my dream Porsche here. Highly recommended.", img: "images/911.webp" },
+    { name: "Mike Ross", rating: 5, text: "Elite service for elite cars. The team knows their stuff.", img: "images/laferrari.jpg" }
 ];
 
 // 2. Function to generate stars based on the rating number
@@ -10,9 +10,9 @@ function generateStars(rating) {
     let stars = "";
     for (let i = 0; i < 5; i++) {
         if (i < rating) {
-            stars += "★"; // Solid star for rated
+            stars += '<img src="images/full-star.webp" alt="Full star">';
         } else {
-            stars += "☆"; // Hollow star for unrated
+            stars += '<img src="images/empty-star.png" alt="Empty star">';
         }
     }
     return stars;
@@ -21,13 +21,13 @@ function generateStars(rating) {
 // 3. Display reviews on the page
 function displayReviews() {
     const container = document.getElementById('reviews-container');
-    
+
     customerReviews.forEach(review => {
         const reviewHTML = `
-            <div class="review-card" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
-                <img src="${review.img}" alt="${review.name}" style="width:60px; border-radius:50%;">
+            <div class="review-card">
+                <img class="review-photo" src="${review.img}" alt="${review.name}">
                 <h3 class="cname">${review.name}</h3>
-                <div class="rating" style="color: gold; font-size: 1.2rem;">
+                <div class="rating">
                     ${generateStars(review.rating)}
                 </div>
                 <p class="review-text">"${review.text}"</p>

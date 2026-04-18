@@ -1,9 +1,9 @@
 // 1. Data Object (Should match your inventory.js data)
 const carData = [
-    { brand: "Ferrari", model: "488 Pista", hp: "711 hp", engine: "3.9L V8", speed: "211 mph", price: "$350,000" },
-    { brand: "Lamborghini", model: "Huracan EVO", hp: "631 hp", engine: "5.2L V10", speed: "202 mph", price: "$289,000" },
-    { brand: "Porsche", model: "911 Turbo S", hp: "640 hp", engine: "3.7L Flat-6", speed: "205 mph", price: "$245,000" },
-    { brand: "Mercedes-Benz", model: "S-Class", hp: "496 hp", engine: "4.0L V8", speed: "155 mph", price: "$138,000" }
+    { id: 0, brand: "Audi", model: "R8", hp: "562 hp", engine: "5.2L V10", speed: "204 mph", price: "$197,000", img: "images/audir8.avif" },
+    { id: 1, brand: "Lamborghini", model: "Huracan", hp: "631 hp", engine: "5.2L V10", speed: "202 mph", price: "$289,000", img: "images/lambo Revuelto.jpg" },
+    { id: 2, brand: "Ferrari", model: "LaFerrari", hp: "949 hp", engine: "6.3L V12 Hybrid", speed: "217 mph", price: "$3,500,000", img: "images/laferrari.jpg" },
+    { id: 3, brand: "Porsche", model: "911", hp: "640 hp", engine: "3.7L Flat-6", speed: "205 mph", price: "$245,000", img: "images/911.webp" }
 ];
 
 // 2. Populate the Select dropdowns
@@ -28,7 +28,7 @@ function updateTable() {
 
         if (carIndex !== "") {
             const car = carData[carIndex];
-            document.getElementById(`name${columnNum}`).textContent = car.brand + " " + car.model;
+            document.getElementById(`name${columnNum}`).innerHTML = `<a class="compare-car-link" href="car-details.html?id=${car.id}"><img src="${car.img}" alt="${car.brand} ${car.model}"><span>${car.brand} ${car.model}</span></a>`;
             document.getElementById(`hp${columnNum}`).textContent = car.hp;
             document.getElementById(`engine${columnNum}`).textContent = car.engine;
             document.getElementById(`speed${columnNum}`).textContent = car.speed;
