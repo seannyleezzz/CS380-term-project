@@ -1,0 +1,119 @@
+/* --- Global Theme & Wrapper --- */
+body {
+    background-color: #0a0a0a;
+    color: white;
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.calc-wrapper {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.calc-wrapper h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.calc-wrapper p {
+    color: #888;
+    margin-bottom: 40px;
+}
+
+/* --- The 5-Box Container --- */
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #111;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* --- Individual Input Boxes --- */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.input-box label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    padding-left: 5px;
+}
+
+.input-box select, 
+.input-box input {
+    background-color: #0a0a0a;
+    border: 1px solid #333;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-box select:focus, 
+.input-box input:focus {
+    border-color: #d4af37;
+}
+
+/* Specific styling for readonly fields */
+input[readonly] {
+    color: #888;
+    background-color: #151515;
+    cursor: not-allowed;
+    border: 1px dashed #333;
+}
+
+/* --- Result Box --- */
+.result-box {
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #222;
+    text-align: center;
+}
+
+.result-box label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d4af37;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#monthly-payment {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+#error-message {
+    min-height: 20px;
+    font-weight: bold;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+    .calc-container {
+        padding: 20px;
+    }
+    #monthly-payment {
+        font-size: 2.5rem;
+    }
+}

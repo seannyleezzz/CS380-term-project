@@ -5,8 +5,8 @@ const cars = [
         price: 197000, mileage: "1,200", img: "images/audir8.avif",
         hp: 602, torque: "413 lb-ft", zero_sixty: "3.2 seconds",
         top_speed: "205 mph", condition: "Certified Pre-Owned",
-        engine: "5.2L V10", cylinders: "10 (V-formation)", 
-        aspiration: "Naturally Aspirated", drivetrain: "quattro (AWD)",
+        engine: "5.2L V10", cylinders: "10", 
+        aspiration: "Naturally Aspirated", drivetrain: "All-Wheel Drive",
         transmission: "7-Speed S Tronic (Dual-Clutch)",
         videoURL: "https://www.youtube.com/watch?v=njTAITHZRxA"
     },
@@ -15,9 +15,9 @@ const cars = [
         brand: "Lamborghini", model: "Revuelto", year: 2024, 
         price: 608358, mileage: "100", img: "images/lambo Revuelto.jpg",
         hp: 1001, torque: "1,048 lb-ft (Combined)", zero_sixty: "2.5 seconds",
-        top_speed: "217+ mph", condition: "New",
-        engine: "6.5L V12 + 3 Electric Motors", cylinders: "12 (V-formation)", 
-        aspiration: "Naturally Aspirated (Hybrid Power)", drivetrain: "E-4WD (All-Wheel Drive)",
+        top_speed: "217+ mph", condition: "Certified Pre-Owned",
+        engine: "6.5L V12 + 3 Electric Motors", cylinders: "12", 
+        aspiration: "Naturally Aspirated (Hybrid Power)", drivetrain: "E-4WD",
         transmission: "8-Speed Dual-Clutch (E-Axle)",
         videoURL: "https://www.youtube.com/watch?v=sitXeGjm4Mc"
     },
@@ -26,9 +26,9 @@ const cars = [
         brand: "Ferrari", model: "LaFerrari", year: 2015, 
         price: 3500000, mileage: "500", img: "images/laferrari.jpg",
         hp: 950, torque: "664 lb-ft (Combined)", zero_sixty: "<3.0 seconds",
-        top_speed: "217+ mph", condition: "Pristine Collectible",
-        engine: "6.3L V12 + Electric Motor (HY-KERS)", cylinders: "12 (V-formation)", 
-        aspiration: "Naturally Aspirated (Hybrid)", drivetrain: "Rear-Wheel Drive (RWD)",
+        top_speed: "217+ mph", condition: "Certified Pre-Owned",
+        engine: "6.3L V12 + Electric Motor (HY-KERS)", cylinders: "12", 
+        aspiration: "Naturally Aspirated (Hybrid)", drivetrain: "Rear-Wheel Drive",
         transmission: "7-Speed F1 Dual-Clutch",
         videoURL: "https://www.youtube.com/watch?v=iRsV6YpLsKA"
     },
@@ -37,20 +37,20 @@ const cars = [
         brand: "Porsche", model: "911 GT3 RS", year: 2023, 
         price: 245000, mileage: "800", img: "images/911.webp",
         hp: 640, torque: "590 lb-ft", zero_sixty: "2.6 seconds",
-        top_speed: "205 mph", condition: "Low Mileage",
-        engine: "3.7L Twin-Turbo Boxer-6", cylinders: "6 (Flat-Six)", 
-        aspiration: "Twin-Turbocharged", drivetrain: "All-Wheel Drive (AWD)",
+        top_speed: "205 mph", condition: "Certified Pre-Owned",
+        engine: "3.7L Twin-Turbo Boxer-6", cylinders: "6", 
+        aspiration: "Twin-Turbocharged", drivetrain: "All-Wheel Drive",
         transmission: "8-Speed PDK (Dual-Clutch)",
         videoURL: "https://www.youtube.com/watch?v=KdLMA9nJStg"
     },
     { 
         id: 4, 
-        brand: "Audi", model: "RS7 Performance", year: 2025, 
+        brand: "Audi", model: "RS7", year: 2025, 
         price: 138000, mileage: "200", img: "images/Audi Rs7.jpg",
         hp: 621, torque: "627 lb-ft", zero_sixty: "3.3 seconds",
-        top_speed: "177 mph (with Dynamic Pack)", condition: "Executive Demo",
-        engine: "4.0L Twin-Turbo V8", cylinders: "8 (V-formation)", 
-        aspiration: "Twin-Turbocharged", drivetrain: "quattro (AWD)",
+        top_speed: "200 mph", condition: "Certified Pre-Owned",
+        engine: "4.0L Twin-Turbo V8", cylinders: "8", 
+        aspiration: "Twin-Turbocharged", drivetrain: "All-Wheel Drive",
         transmission: "8-Speed Tiptronic (Automatic)"
     },
     { 
@@ -58,9 +58,9 @@ const cars = [
         brand: "Lamborghini", model: "Huracan STO", year: 2023, 
         price: 2000000, mileage: "800", img: "images/lambo STO.jpeg",
         hp: 631, torque: "417 lb-ft", zero_sixty: "3.0 seconds",
-        top_speed: "193 mph", condition: "Certified Track Tool",
-        engine: "5.2L V10", cylinders: "10 (V-formation)", 
-        aspiration: "Naturally Aspirated", drivetrain: "Rear-Wheel Drive (RWD)",
+        top_speed: "193 mph", condition: "Certified Pre-Owned",
+        engine: "5.2L V10", cylinders: "10", 
+        aspiration: "Naturally Aspirated", drivetrain: "Rear-Wheel Drive",
         transmission: "7-Speed Dual-Clutch (LDF)",
         videoURL: "https://www.youtube.com/watch?v=HAoYDs65xvA"
     },
@@ -69,9 +69,9 @@ const cars = [
         brand: "Ferrari", model: "SF90 Stradale", year: 2023, 
         price: 450000, mileage: "800", img: "images/Ferrari SF90.jpg",
         hp: 986, torque: "590 lb-ft (Engine) / 800+ lb-ft (Combined)", zero_sixty: "2.5 seconds",
-        top_speed: "211 mph", condition: "Like New",
-        engine: "4.0L Twin-Turbo V8 + 3 Electric Motors (PHEV)", cylinders: "8 (V-formation)", 
-        aspiration: "Twin-Turbo (Plug-In Hybrid)", drivetrain: "e-4WD (All-Wheel Drive)",
+        top_speed: "211 mph", condition: "Certified Pre-Owned",
+        engine: "4.0L Twin-Turbo V8 + 3 Electric Motors (PHEV)", cylinders: "8", 
+        aspiration: "Twin-Turbo (Plug-In Hybrid)", drivetrain: "e-4WD",
         transmission: "8-Speed F1 Dual-Clutch",
         videoURL: "https://www.youtube.com/watch?v=MvVXL-vBQs0"
     },
@@ -81,8 +81,8 @@ const cars = [
         price: 115000, mileage: "22,800", img: "images/Porsche Panamera GTS.jpg.webp",
         hp: 677, torque: "626 lb-ft (Combined)", zero_sixty: "3.2 seconds",
         top_speed: "192 mph", condition: "Certified Pre-Owned",
-        engine: "4.0L Twin-Turbo V8 + Electric Motor (PHEV)", cylinders: "8 (V-formation)", 
-        aspiration: "Twin-Turbo (Plug-In Hybrid)", drivetrain: "All-Wheel Drive (AWD)",
+        engine: "4.0L Twin-Turbo V8 + Electric Motor (PHEV)", cylinders: "8", 
+        aspiration: "Twin-Turbo (Plug-In Hybrid)", drivetrain: "All-Wheel Drive",
         transmission: "8-Speed PDK (Dual-Clutch)",
         videoURL: "https://www.youtube.com/watch?v=-QfRAwg3gkM"
     },
@@ -91,9 +91,9 @@ const cars = [
         brand: "Bugatti", model: "Chiron SuperSport 300+", year: 2023, 
         price: 4500000, mileage: "800", img: "images/Bugatti Chiron SuperSport 300+.jpg",
         hp: 1578, torque: "1,180 lb-ft", zero_sixty: "2.4 seconds",
-        top_speed: "304+ mph (Limited to 273 mph for production)", condition: "Ultimate Collectible",
-        engine: "8.0L Quad-Turbo W16", cylinders: "16 (W-formation)", 
-        aspiration: "Quad-Turbocharged", drivetrain: "Permanent All-Wheel Drive",
+        top_speed: "304+ mph", condition: "Certified Pre-Owned",
+        engine: "8.0L Quad-Turbo W16", cylinders: "16", 
+        aspiration: "Quad-Turbocharged", drivetrain: "All-Wheel Drive",
         transmission: "7-Speed Dual-Clutch (DSG)",
         videoURL: "https://www.youtube.com/watch?v=FuS_bXJNync&t=55s"
     },
@@ -102,25 +102,26 @@ const cars = [
         brand: "Chevrolet", model: "Corvette Stingray Z51", year: 2026, 
         price: 88000, mileage: "800", img: "images/Chevrolet Corvette Stingray.avif",
         hp: 495, torque: "470 lb-ft", zero_sixty: "2.9 seconds",
-        top_speed: "194 mph", condition: "Pre-Owned Excellence",
-        engine: "6.2L V8 (LT2)", cylinders: "8 (V-formation)", 
-        aspiration: "Naturally Aspirated", drivetrain: "Rear-Wheel Drive (RWD)",
+        top_speed: "194 mph", condition: "Certified Pre-Owned",
+        engine: "6.2L V8", cylinders: "8", 
+        aspiration: "Naturally Aspirated", drivetrain: "Rear-Wheel Drive",
         transmission: "8-Speed Dual-Clutch",
         videoURL: "https://www.youtube.com/watch?v=SN3ytYGh2SM"
 
     },
     { 
         id: 10, 
-        brand: "Bugatti", model: "Chiron Sport '110 Ans Bugatti'", year: 2023, 
+        brand: "Bugatti", model: "Chiron Sport", year: 2023, 
         price: 3450000, mileage: "800", img: "images/Bugatti Chiron Sport.avif",
         hp: 1479, torque: "1,180 lb-ft", zero_sixty: "2.4 seconds",
-        top_speed: "261 mph (Limited)", condition: "Certified Collection",
-        engine: "8.0L Quad-Turbo W16", cylinders: "16 (W-formation)", 
-        aspiration: "Quad-Turbocharged", drivetrain: "Permanent All-Wheel Drive",
+        top_speed: "261 mph", condition: "Certified Pre-Owned",
+        engine: "8.0L Quad-Turbo W16", cylinders: "16", 
+        aspiration: "Quad-Turbocharged", drivetrain: "All-Wheel Drive",
         transmission: "7-Speed Dual-Clutch (DSG)",
         videoURL: "https://www.youtube.com/watch?v=PkkV1vLHUvQ"
     },
 ];
+
 
 // 2. Extract the ID from the URL (e.g., ?id=2)
 const params = new URLSearchParams(window.location.search);
