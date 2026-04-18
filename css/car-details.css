@@ -1,0 +1,246 @@
+/* 1. Global Reset & Page Theme */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Set the dark theme here directly */
+    background-color: #0a0a0a; 
+    color: white;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* --- Luxury Header & Nav (Same as Index) --- */
+header {
+    background-color: #111;
+    color: white;
+    padding: 40px 0;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #999;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+}
+
+nav a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.details-main-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 4%;
+}
+
+/* --- Layout: Side-by-Side Flexbox --- */
+.details-flex-container {
+    display: flex;
+    gap: 80px; /* Large gap to separate image from text */
+    align-items: flex-start;
+}
+
+/* 1. Image Column: Constrained to 35% of the width */
+.hero-image-box {
+    flex: 0 0 50%; 
+    position: sticky;
+    top: 40px;
+    display: flex;       /* Added to handle vertical alignment */
+    flex-direction: column; /* Added */
+    gap: 20px;           /* Added space between image and video button */
+}
+
+.details-hero-img {
+    width: 100%;
+    height: auto; /* Allow the car to keep its natural proportions */
+    max-height: 50vh; /* Prevents it from getting too tall on large screens */
+    object-fit: contain; 
+    border-radius: 12px;
+    border: 1px solid #222;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* Video Button under Image */
+.btn-video {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ff0000; /* YouTube Red */
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-video:hover {
+    background-color: #cc0000;
+    transform: translateY(-3px);
+}
+
+/* 2. Specs Column: Taking up the remaining 60% */
+.specs-box {
+    flex: 1 1 60%;
+    background: #111;
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid #222;
+}
+
+.title-price-box h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+.details-price {
+    font-size: 2rem;
+    color: #d4af37; /* Luxury Gold */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 50px;
+}
+
+/* --- Performance & Technical Metrics Spacing --- */
+.specs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Significant spacing between every stat */
+    margin-bottom: 50px;
+}
+
+.specs-grid h4 {
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between; /* Pushes Label to left and Value to right */
+    align-items: center;
+    border-left: 3px solid #d4af37;
+    padding-left: 25px;
+}
+
+.spec-label {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+}
+
+.spec-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #eee;
+    text-align: right;
+}
+
+.full-width-spec {
+    margin-top: 20px;
+    border-top: 1px solid #222;
+    padding-top: 25px;
+}
+
+/* --- Buttons: Modern & Distinct --- */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Large space between each button */
+    margin-top: 40px;
+}
+
+/* Removes the purple link default */
+.action-buttons a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #d4af37;
+    color: #000 !important; /* Black text on gold */
+}
+
+.btn-primary:hover {
+    background-color: #f1c40f;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #fff;
+    color: #fff !important;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+.back-link {
+    border: 1px solid #444;
+    color: #888 !important;
+    font-size: 0.8rem;
+}
+
+.back-link:hover {
+    border-color: #d4af37;
+    color: #d4af37 !important;
+}
+
+/* --- Responsive View (Stacked for Mobile) --- */
+@media (max-width: 1000px) {
+    .details-flex-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .hero-image-box {
+        flex: 1 1 100%;
+        position: relative;
+    }
+    .specs-box {
+        width: 100%;
+        padding: 30px;
+    }
+}

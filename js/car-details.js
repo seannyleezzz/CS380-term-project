@@ -122,53 +122,94 @@ const cars = [
     },
 ];
 
-function displayCars(carArray) {
-    const container = document.getElementById('car-container');
-    container.innerHTML = ""; 
+// 2. Extract the ID from the URL (e.g., ?id=2)
+const params = new URLSearchParams(window.location.search);
+const carId = parseInt(params.get('id'));
 
-    carArray.forEach((car) => {
-        const carCard = `
-            <article class="car-card">
-                <img src="${car.img}" alt="${car.brand} ${car.model}">
-                <div class="car-info">
-                    <h3>${car.year} ${car.brand} ${car.model}</h3>
-                    <p>Mileage: ${car.mileage} miles</p>
-                    <span class="car-price">$${car.price.toLocaleString()}</span>
-                    <br>
-                    <a href="car-details.html?id=${car.id}" class="view-btn">View Full Specs</a>
+// 3. Find the car and display it
+const car = cars.find(c => c.id === carId);
+const container = document.getElementById('details-container');
+
+if (car) {
+    container.innerHTML = `
+        <div class="details-main-wrapper">
+            
+            <div class="details-flex-container">
+                <div class="hero-image-box">
+                    <img src="${car.img}" alt="${car.brand} ${car.model}" class="details-hero-img">
+
+                    <a href="${car.videoURL}" target="_blank" class="btn-video">Watch this video</a>
                 </div>
-            </article>
-        `;
-        container.innerHTML += carCard;
-    });
-}
 
-// Initial Display
-displayCars(cars);
+                <div class="specs-box">
+                    <div class="title-price-box">
+                        <h2>${car.year} ${car.brand} ${car.model}</h2>
+                        <span class="details-price">$${car.price.toLocaleString()}</span>
+                    </div>
 
-// --- Filtering Logic ---
+                    <div class="specs-grid performance-grid">
+                        <h4>PERFORMANCE METRICS</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">Power Output: </span>
+                            <span class="spec-value">${car.hp} HP</span>
+                        </div>
+                        <br>
+                        <div class="spec-item">
+                            <span class="spec-label">Torque: </span>
+                            <span class="spec-value">${car.torque}</span>
+                        </div>
+                        <br>
+                        <div class="spec-item">
+                            <span class="spec-label">0–60 MPH: </span>
+                            <span class="spec-value">${car.zero_sixty}</span>
+                        </div>
+                        <br>
+                        <div class="spec-item">
+                            <span class="spec-label">Top Speed: </span>
+                            <span class="spec-value">${car.top_speed}</span>
+                        </div>
+                        <br>
+                    </div>
 
-// Sort by Price
-document.getElementById('sortPrice').addEventListener('change', filterAndSort);
+                    <div class="specs-grid technical-grid">
+                        <h4>ENGINEERING SPECS</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">Engine: </span>
+                            <span class="spec-value">${car.engine}</span>
+                        </div>
+                        <br>
+                        <div class="spec-item">
+                            <span class="spec-label">Cylinders: </span>
+                            <span class="spec-value">${car.cylinders}</span>
+                        </div>
+                        <br>
+                        <div class="spec-item">
+                            <span class="spec-label">Drivetrain: </span>
+                            <span class="spec-value">${car.drivetrain}</span>
+                        </div>
+                        <br>
+                        <div class="spec-item">
+                            <span class="spec-label">Condition: </span>
+                            <span class="spec-value">${car.condition}</span>
+                        </div>
+                        <br>
+                    </div>
 
-// Filter by Brand
-document.getElementById('filterBrand').addEventListener('change', filterAndSort);
+                    <div class="spec-item full-width-spec">
+                        <span class="spec-label">Transmission System: </span>
+                        <span class="spec-value">${car.transmission}</span>
+                    </div>
+                    <br>
 
-function filterAndSort() {
-    const priceVal = document.getElementById('sortPrice').value;
-    const brandVal = document.getElementById('filterBrand').value;
-
-    // 1. Filter by Brand first
-    let filteredCars = cars.filter(car => {
-        return brandVal === "all" || car.brand === brandVal;
-    });
-
-    // 2. Then Sort
-    if (priceVal === "low-high") {
-        filteredCars.sort((a, b) => a.price - b.price);
-    } else if (priceVal === "high-low") {
-        filteredCars.sort((a, b) => b.price - a.price);
-    }
-
-    displayCars(filteredCars);
+                    <div class="action-buttons">
+                        <a href="test-drive-booking.html" class="btn-primary">Book Test Drive</a> 
+                        <a href="contact.html" class="btn-secondary">Inquiry</a> 
+                        <a href="inventory.html" class="back-link">Back to Inventory</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+} else {
+    container.innerHTML = `<h2>Car Not Found</h2><a href="inventory.html">Return to Inventory</a>`;
 }

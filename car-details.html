@@ -3,25 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sean's Elite Motors</title>
-    <link rel="stylesheet" href="../css/car-details.css" />
+    <title>Car Details | Luxury Automotive</title>
+    <link rel="stylesheet" href="css/car-details.css" />
   </head>
-  <body>
+  <body class="inventory-body">
     <header>
-      <h1>Sean's Elite Motors</h1>
+      <h1>Luxury Automotive | Avant-Garde Supercars</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="test-drive-booking.html">Book Test Drive</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="finance-calculator.html">Financing</a>
+        <a href="reviews.html">Reviews</a>
+      </nav>
     </header>
-    <main>
-      <h2 id="car-name">Loading...</h2>
-      <img id="car-image" src="" alt="Supercar" style="max-width: 500px" />
 
-      <div class="specs">
-        <p><strong>Horsepower:</strong> <span id="car-hp"></span></p>
-        <p><strong>Engine:</strong> <span id="car-engine"></span></p>
-      </div>
-
-      <button onclick="window.history.back()">Back to Inventory</button>
+    <main id="details-container">
+      <p style="text-align: center; padding: 50px">Loading car details...</p>
     </main>
 
-    <script src="js/details.js"></script>
+    <footer>
+      <p>&copy; 2026 Luxury Automotive. All rights reserved.</p>
+    </footer>
+
+    <script src="js/car-details.js"></script>
   </body>
 </html>
