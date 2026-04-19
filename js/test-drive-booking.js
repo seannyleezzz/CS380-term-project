@@ -1,7 +1,5 @@
-// 1. Select the date input
 const datePicker = document.getElementById('date');
 
-// 2. Add an Event Listener for when the date is changed
 datePicker.addEventListener('input', function(e) {
     const day = new Date(this.value).getUTCDay();
     
@@ -14,7 +12,7 @@ datePicker.addEventListener('input', function(e) {
 
 // 3. Form Submission Mastery (Prevents page refresh and shows a confirmation)
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Stop the form from reloading the page
+    e.preventDefault(); 
     
     const name = document.getElementById('name').value;
     const car = document.getElementById('vehicle').value;
@@ -22,6 +20,4 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
 
     alert(`Thank you, ${name}! Your request to test drive the ${car} at ${time} has been received.`);
     
-    // You could redirect to a 'thank-you.html' here to hit the 9th page idea!
-    // window.location.href = 'thank-you.html';
 });

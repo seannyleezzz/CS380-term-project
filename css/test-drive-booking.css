@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com');
 
+
 * {
     box-sizing: border-box;
 }
@@ -57,7 +58,7 @@ h2, h3 {
 }
 
 
-.review-grid
+.book-grid
 {
     max-width: 1200px;
     margin: 0 auto;
@@ -67,31 +68,13 @@ h2, h3 {
     align-items: center;
 }
 
-.review-card
+.book-card
 {
     max-width: 800px;
     background-color: white;
     padding: 20px;
-    box-shadow: 0 4px 12px black;
     color: black;
-}
-
-.leave-review
-{
-    margin: 0 auto;
-    display:flex;
-    flex-direction:column;
-    padding: 40px;
-    align-items: center;
-    background-color: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px black;
-    color: black;
-}
-
-.review-card:hover
-{
-    transform: translateY(-5px);
+    border-radius: 8px;
 }
 
 
