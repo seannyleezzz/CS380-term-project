@@ -1,3 +1,4 @@
+//Author: Sean Lee
 const cars = [
     { 
         id: 0, 
@@ -122,6 +123,7 @@ const cars = [
     },
 ];
 
+//Building the page 
 function displayCars(carArray) {
     const container = document.getElementById('car-container');
     container.innerHTML = ""; 
@@ -143,27 +145,27 @@ function displayCars(carArray) {
     });
 }
 
-// Initial Display
+//Initial Display
 displayCars(cars);
 
-// --- Filtering Logic ---
 
-// Sort by Price
+
+// Sort by price when user picks a new option in the dropdown menu then run the filterAndSort Func
 document.getElementById('sortPrice').addEventListener('change', filterAndSort);
 
-// Filter by Brand
+// Filter by brand when user picks a new option in the dropdown menu then run the filterAndSort Func
 document.getElementById('filterBrand').addEventListener('change', filterAndSort);
 
 function filterAndSort() {
     const priceVal = document.getElementById('sortPrice').value;
     const brandVal = document.getElementById('filterBrand').value;
 
-    // 1. Filter by Brand first
+    //Filter by Brand: If the user selected all, it keeps everything. If they selected "Audi," it only keeps cars where the brand matches "Audi"
     let filteredCars = cars.filter(car => {
         return brandVal === "all" || car.brand === brandVal;
     });
 
-    // 2. Then Sort
+    //Then Sort...if the result is negative, it knows a is cheaper than b and puts it first.
     if (priceVal === "low-high") {
         filteredCars.sort((a, b) => a.price - b.price);
     } else if (priceVal === "high-low") {

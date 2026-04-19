@@ -1,6 +1,8 @@
+//Author: Sean Lee
+
 let currentIndex = 0;
 const slider = document.getElementById('car-slider');
-const totalImages = 4; // Updated to 4
+const totalImages = 4; // I only put 4 images in the slider in the html page
 
 function slideImages() {
     currentIndex++;
@@ -15,5 +17,5 @@ function slideImages() {
     slider.style.transform = `translateX(${percentage}%)`;
 }
 
-// Keep it at 5000ms (5 seconds)
+//Making each interval 5000ms which is = 5 seconds because the parameter is in miliseconds
 setInterval(slideImages, 5000);

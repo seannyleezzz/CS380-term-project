@@ -1,19 +1,17 @@
-/* --- Global Styles --- */
+/* Author: Sean Lee */
 * {
     box-sizing: border-box;
 }
 
 body {
     background-color: #111; 
-    margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-align: center;
-    overflow-x: hidden; /* Prevents side-scrolling from the slider */
 }
 
-/* --- Luxury Header & Nav --- */
+
 header {
-    background-color: #111; /* Sleek black */
+    background-color: #111; 
     color: white;
     padding: 40px 0;
     border-bottom: 1px solid #333;
@@ -41,9 +39,9 @@ nav a {
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* I learned this online, its just to maake a smoother effect when i hover across the links*/
     padding-bottom: 5px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent; /* I learned this online, its just to also make a smoother effect when i hover across the links*/
 }
 
 nav a:hover {
@@ -51,25 +49,23 @@ nav a:hover {
     border-bottom: 1px solid white;
 }
 
-/* --- Full-Width Hero Slider --- */
+
 .slider-container {
-    width: 100vw; 
+    width: 100vw; /*This ensures the window is exactly 100% of the viewport width regardless of what the screensize is*/
     margin: 0;
-    overflow: hidden;
-    position: relative;
-    background-color: #000;
+    overflow: hidden; 
 }
 
 .slider {
     display: flex;
-    width: 400%; /* 4 images = 400% */
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother "luxury" slide */
+    width: 400%; 
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .slide {
-    width: 25%; /* Exactly 1/4 of 400% */
-    height: 75vh; /* 75% of the viewport height */
-    object-fit: cover;
+    width: 25%; 
+    height: 75vh; 
+    object-fit: cover; /*if the image aspect ratio doesn't match the screen, it crops the edges rather than squishing the image*/
 }
 
 .hero-text-box {
@@ -84,7 +80,7 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-/* --- CTA Dark Section & Icons --- */
+
 .cta-dark {
     background-color: #1a1a1a;
     color: white;
@@ -139,7 +135,6 @@ nav a:hover {
     margin: 0 auto;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .contact-card h2 {
@@ -148,7 +143,6 @@ nav a:hover {
     color: #111;
 }
 
-/* --- Footer --- */
 footer {
     background-color: #111;
     color: #666;

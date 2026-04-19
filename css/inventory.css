@@ -1,18 +1,17 @@
+/* Author: Sean Lee */
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #0a0a0a; 
-    color: white;
-    margin: 0;
+    background-color: #111; 
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-align: center;
-    overflow-x: hidden;
 }
 
+
 header {
-    background-color: #111;
+    background-color: #111; 
     color: white;
     padding: 40px 0;
     border-bottom: 1px solid #333;
@@ -40,9 +39,9 @@ nav a {
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* I learned this online, its just to maake a smoother effect when i hover across the links*/
     padding-bottom: 5px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent; /* I learned this online, its just to also make a smoother effect when i hover across the links*/
 }
 
 nav a:hover {
@@ -50,7 +49,7 @@ nav a:hover {
     border-bottom: 1px solid white;
 }
 
-/* --- Inventory Page Layout --- */
+
 .inventory-main {
     padding: 60px 0;
 }
@@ -59,7 +58,6 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Fixed: Added the 4% side padding you requested */
     padding: 0 4% 30px 4%; 
     margin-bottom: 50px;
     border-bottom: 1px solid #222;
@@ -74,7 +72,6 @@ nav a:hover {
     color: white;
 }
 
-/* --- Filter Section Styling --- */
 .filters {
     display: flex;
     gap: 40px;
@@ -91,7 +88,6 @@ nav a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
-    /* Fixed: Changed color to white for the dark theme */
     color: white; 
 }
 
@@ -105,24 +101,23 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* --- Showroom Grid Layout --- */
+
 .inventory-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 80px;
     max-width: 1400px;
     margin: 0 auto;
-    /* Fixed: Added the 4% side padding to match header */
     padding: 0 4% 80px 4%; 
 }
 
-/* --- Individual Car Cards --- */
+
 .car-card {
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 20px 40px rgba(0,0,0,1);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
     text-align: left;
 }
 
@@ -139,7 +134,7 @@ nav a:hover {
 
 .car-info {
     padding: 35px;
-    color: #111; /* Keep text dark inside the white card */
+    color: #111; 
 }
 
 .car-info h3 {
@@ -175,7 +170,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* --- Responsive Layout --- */
+
 @media (max-width: 1000px) {
     .inventory-grid {
         grid-template-columns: 1fr;

@@ -1,3 +1,4 @@
+//Author: Sean Lee
 const cars = [
     { 
         id: 0, 
@@ -123,14 +124,16 @@ const cars = [
 ];
 
 
-// 2. Extract the ID from the URL (e.g., ?id=2)
+//extracting the id from the URL 
 const params = new URLSearchParams(window.location.search);
+//converting string into int since data in url are always in strings
 const carId = parseInt(params.get('id'));
 
-// 3. Find the car and display it
+//find the car and display it by looking at every car c in the list and stop as soon as the computer finds the one where the id matches the carID
 const car = cars.find(c => c.id === carId);
-const container = document.getElementById('details-container');
 
+
+const container = document.getElementById('details-container');
 if (car) {
     container.innerHTML = `
         <div class="details-main-wrapper">
@@ -205,7 +208,7 @@ if (car) {
                     <div class="action-buttons">
                         <a href="test-drive-booking.html" class="btn-primary">Book Test Drive</a> 
                         <a href="contact.html" class="btn-secondary">Inquiry</a> 
-                        <a href="inventory.html" class="back-link">Back to Inventory</a>
+                        <a href="inventory.html" class="back-btn">Back to Inventory</a>
                     </div>
                 </div>
             </div>
